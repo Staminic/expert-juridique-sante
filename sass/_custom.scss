@@ -1,0 +1,24 @@
+body {
+  line-height: $line-height;
+  background-color: $light-beige;
+  color: $dark-grey;
+  font-family: $font-family-sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $line-height-headings;
+}
+
+.h4 {
+  font-size: $h4-font-size;
+}
+
+a,
+a:focus {
+  text-decoration: underline;
+}

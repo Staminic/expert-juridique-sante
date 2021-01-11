@@ -1,0 +1,104 @@
+/* Solution blocks */
+.solution-block {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+
+  @media (min-width: 600px) and (max-width: 781px) {
+    .wp-block-column:not(:only-child) {
+      flex-basis: calc(80% - 1em) !important;
+    }
+
+    .wp-block-column:nth-child(2n) {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 781px) {
+    .wp-block-columns {
+      &.invert-order {
+        .wp-block-column:first-child {
+          order: 3;
+        }
+      }
+    }
+
+    .wp-block-column {
+      h2 {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        &:before {
+          content: url("../img/picto-heading-sentinelle.svg");
+          width: 60px;
+          display: flex;
+          align-items: center;
+          margin-right: 10px;
+        }
+
+        &.mb-0 {
+          margin-bottom: 0.2em !important;
+        }
+      }
+    }
+
+    .hide-mobile {
+      display: none;
+    }
+  }
+
+  @media (min-width: 782px) {
+    .hide-desktop {
+      display: none;
+    }
+  }
+}
+
+.wp-block-columns .wp-block-group {
+  &.infos-solution {
+    margin-bottom: 1.6em;
+    padding: 0;
+    color: $brand-orange;
+    text-align: center;
+
+    p {
+      margin: 0;
+      padding-top: 0.5rem;
+      margin-top: 0.5rem;
+      border-top: 1px dashed $brand-blue;
+    }
+
+    .info {
+      font-family: $font-family-serif;
+      font-size: $h4-font-size;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* Buttons */
+.wp-block-buttons .wp-block-button {
+  &.gradient {
+    a {
+      padding-right: 20px;
+      padding-left: 20px;
+      background: transparent linear-gradient(261deg, #eda047 0%, #ed7f47 100%)
+        0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #0000004d;
+      color: $white;
+      // font-size: $h4-font-size;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.wp-block-buttons .wp-block-button {
+  &.ghost {
+    a {
+      padding-right: 20px;
+      padding-left: 20px;
+      background: none;
+      font-size: inherit !important;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+/* Columns */
+.wp-block-columns {
+  @media (max-width: 781px) {
+    justify-content: center;
+  }
+
+  &.narrower {
+    .wp-block-column:not(:first-child) {
+      @media (min-width: 782px) {
+        margin-left: 5em;
+      }
+    }
+  }
+}
+
+.wp-block-column {
+  @media (max-width: 781px) {
+    margin: 0 !important;
+  }
+}
+
+/* Groups */
+.wp-block-group.alignwide {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (min-width: 782px) {
+    border-bottom: 1px dashed $brand-blue;
+  }
+
+  &:last-child {
+    @media (min-width: 782px) {
+      border-bottom: none;
+    }
+  }
+}
