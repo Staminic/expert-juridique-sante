@@ -23,8 +23,39 @@
 }
 
 /* Width */
-.w-940 {
-  width: 940px !important;
+
+.w-65 {
+  @media (min-width: 782px) {
+    width: 65%;
+    margin: 0 auto;
+  }
+}
+
+.w-85 {
+  @media (min-width: 782px) {
+    width: 85% !important;
+    margin: 0 auto !important;
+  }
+}
+
+.fullwidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.fullwidth-lg {
+  @media (min-width: 782px) {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
 }
 
 /* Flex */
@@ -34,4 +65,34 @@
 
 .align-self-center {
   align-self: center;
+}
+
+/* Typographie */
+blockquote {
+  margin: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: none;
+  color: $brand-orange;
+  font-family: $font-family-serif;
+  font-size: $h3-font-size;
+  text-align: center;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 1px;
+    margin: 0.5em auto;
+    background-color: $brand-orange;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 1px;
+    margin: 0.5em auto;
+    background-color: $brand-orange;
+  }
 }

@@ -28,7 +28,7 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
  * Enqueue Google Fonts
  */
 function ejs_google_fonts() {
-	wp_enqueue_style( 'ejs-google-fonts', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&family=Source+Serif+Pro:ital@0;1&display=swap', false ); 
+	wp_enqueue_style( 'ejs-google-fonts', 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400&display=swap', false ); 
 }
 
 add_action( 'wp_enqueue_scripts', 'ejs_google_fonts' );

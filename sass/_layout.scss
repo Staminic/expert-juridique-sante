@@ -1,3 +1,7 @@
+.site-main {
+  padding-bottom: 4em;
+}
+
 /* Columns */
 .wp-block-columns {
   @media (max-width: 781px) {
@@ -17,6 +21,10 @@
   @media (max-width: 781px) {
     margin: 0 !important;
   }
+
+  &:not(:first-child) {
+    margin-left: 1.5em;
+  }
 }
 
 /* Groups */
@@ -28,9 +36,14 @@
     border-bottom: 1px dashed $brand-blue;
   }
 
-  &:last-child {
+  &.sos-juridique {
     @media (min-width: 782px) {
       border-bottom: none;
     }
   }
+}
+
+.wp-block-group {
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
