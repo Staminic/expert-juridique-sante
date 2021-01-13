@@ -145,16 +145,26 @@
   color: $brand-blue;
   font-family: $font-family-serif;
   font-size: $lead-font-size;
+  @media (max-width: 921px) {
+    font-size: $lead-font-size * 0.912;
+  }
   line-height: $line-height-headings;
   text-transform: uppercase;
 
   p {
     margin: 0;
+
+    &:not(.data) {
+      margin-bottom: 1em;
+    }
   }
 
   .data {
     color: $brand-orange;
     font-size: 60px;
+    @media (max-width: 921px) {
+      font-size: 54.72px;
+    }
   }
 }
 
@@ -205,6 +215,9 @@
     position: relative;
     width: 100vw;
     height: 500px;
+    @media (max-width: 781px) {
+      height: 250px;
+    }
     left: 50%;
     right: 50%;
     margin-left: -50vw;
@@ -219,18 +232,22 @@
     background-attachment: scroll;
 
     .entry-title-container {
-      @media (min-width: 782px) {
+      width: 90%;
+      @media (min-width: 922px) {
         width: 780px;
       }
     }
 
     .entry-title {
       margin: 0;
-      padding: 1em 2.2em 0 2.2em;
+      padding: 1em 1em 0 1em;
       background-color: $light-beige;
       color: $brand-orange;
       font-family: $font-family-serif;
       font-size: $h1-font-size;
+      @media (max-width: 921px) {
+        font-size: 34px;
+      }
       text-align: center;
       text-transform: uppercase;
     }
@@ -238,17 +255,35 @@
 }
 
 /* Lead */
-
 .lead {
-  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
   padding: 1.2em;
   font-size: $h3-font-size;
+  @media (max-width: 921px) {
+    font-size: 22px;
+  }
+
   font-weight: $font-weight-light;
   text-align: center;
 
   &.lead-spacer {
+    position: relative;
+    border-bottom: 1px solid $brand-orange;
     &:after {
-      content: url("../img/lead-spacer.svg");
+      content: "";
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      left: 50%;
+      bottom: -11px;
+      transform: translateX(-50%) rotate(45deg);
+      background-color: $light-beige;
+      border-right: 1px solid $brand-orange;
+      border-bottom: 1px solid $brand-orange;
     }
   }
 }

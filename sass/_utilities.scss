@@ -76,6 +76,9 @@ blockquote {
   color: $brand-orange;
   font-family: $font-family-serif;
   font-size: $h3-font-size;
+  @media (max-width: 921px) {
+    font-size: 22px;
+  }
   text-align: center;
 
   &:before {
