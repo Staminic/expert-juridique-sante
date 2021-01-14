@@ -1,15 +1,31 @@
 .site-header {
+  padding-bottom: 0.5em;
+
   .ast-container {
     padding: 0 !important;
   }
 
   .site-branding {
     padding: 0;
-
-    @media (max-width: 921px) {
-      display: none !important;
-    }
   }
+}
+
+.site-branding-wrapper {
+  display: flex;
+  @media (max-width: 921px) {
+    display: none !important;
+  }
+  justify-content: space-between;
+  padding: 1em;
+
+  .ast-site-identity {
+    padding: 0;
+  }
+}
+
+.main-header-bar {
+  background-color: transparent;
+  border: none;
 }
 
 #mega-menu-wrap-primary {

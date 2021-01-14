@@ -40,11 +40,12 @@ add_action( 'wp_enqueue_scripts', 'ejs_google_fonts' );
 // 	}
 // }
 
+// Astra markup overrides
+
 /**
  * Function to get site title/logo
  */
 if ( ! function_exists( 'astra_site_branding_markup' ) ) {
-
 	/**
 	 * Site Title / Logo
 	 *
@@ -53,26 +54,28 @@ if ( ! function_exists( 'astra_site_branding_markup' ) ) {
 	function astra_site_branding_markup() {
 		?>
 
-		<div style="display: flex;">
-		<div class="site-branding">
-			<div
-			<?php
-				echo astra_attr(
-					'site-identity',
-					array(
-						'class' => 'ast-site-identity',
-					)
-				);
-			?>
-			>
-				<?php astra_logo(); ?>
+		<div class="site-branding-wrapper">
+			<div class="site-branding">
+				<div
+				<?php
+					echo astra_attr(
+						'site-identity',
+						array(
+							'class' => 'ast-site-identity',
+						)
+					);
+				?>
+				>
+					<?php astra_logo(); ?>
+				</div>
 			</div>
+
+			<?php if ( is_active_sidebar( 'header-widget' ) ) {
+				dynamic_sidebar( 'header-widget' );
+			} ?>
+
 		</div>
-		<pre>test65</pre>
-		</div>
-		<!-- .site-branding -->
 		<?php
 	}
 }
-
 add_action( 'astra_masthead_content', 'astra_site_branding_markup', 8 );

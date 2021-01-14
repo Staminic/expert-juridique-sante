@@ -26,8 +26,9 @@
 
 	<?php astra_entry_top(); ?>
 	
-	<header class="entry-header hero <?php astra_entry_header_class(); ?>" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>');">
+	<div class="hero" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>');"></div>
 
+	<header class="entry-header <?php astra_entry_header_class(); ?>">
 		<div class="entry-title-container">
 			<?php
 			astra_the_title(
@@ -41,7 +42,6 @@
 			);
 			?>
 		</div>
-
 	</header><!-- .entry-header -->
 
 	<div class="entry-content clear" 

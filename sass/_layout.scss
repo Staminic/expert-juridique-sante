@@ -1,3 +1,13 @@
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-footer {
+  margin-top: auto;
+}
+
 .site-main {
   padding-bottom: 4em;
 }
@@ -44,6 +54,30 @@
 }
 
 .wp-block-group {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  // padding-top: 1em;
+  // padding-bottom: 1em;
+
+  @media (max-width: 921px) {
+    padding: 2em 0;
+  }
+
+  @media (min-width: 922px) {
+    padding: 2em;
+  }
+}
+
+/* Footer */
+@media (max-width: 921px) {
+  .footer-adv-widget-1,
+  .footer-adv-widget-2 {
+    display: none;
+  }
+}
+
+.footer-address-block {
+  display: flex;
+  align-items: flex-start;
+  @media (min-width: 922px) {
+    justify-content: flex-end;
+  }
 }
