@@ -11,7 +11,12 @@ h3,
 h4,
 h5,
 h6 {
+  margin-bottom: 0.2em !important;
   line-height: $line-height-headings;
+}
+
+.h3 {
+  font-size: $h3-font-size !important;
 }
 
 .h4 {
@@ -21,4 +26,10 @@ h6 {
 a,
 a:focus {
   text-decoration: underline;
+}
+
+.read-more {
+  a {
+    text-decoration: none;
+  }
 }

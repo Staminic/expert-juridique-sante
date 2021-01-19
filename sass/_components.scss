@@ -140,6 +140,26 @@
   }
 }
 
+.wp-block-buttons .wp-block-button {
+  &.back-button {
+    a {
+      display: flex;
+      align-items: center;
+      padding: 12px 24px;
+      background-color: #f8f3ed;
+      border-radius: 7px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      color: #a8a5a0;
+
+      &::before {
+        content: url("../img/back-button-angle.svg");
+        margin-right: 5px;
+        line-height: 0;
+      }
+    }
+  }
+}
+
 /* Stats */
 .stats {
   &.w-85 {
@@ -356,4 +376,77 @@
     border: none;
     color: inherit !important;
   }
+}
+
+/* Custom comumns */
+.wp-block-columns {
+  &.cols-3 {
+    flex-wrap: wrap;
+
+    .wp-block-column {
+      margin-right: 1.2em !important;
+      margin-bottom: 1.2em !important;
+      margin-left: 1.2em !important;
+      @media (min-width: 600px) and (max-width: 781px) {
+        flex-basis: 42% !important;
+      }
+      @media (min-width: 782px) {
+        flex-basis: 44% !important;
+      }
+      @media (min-width: 922px) {
+        flex-basis: 29% !important;
+      }
+    }
+
+    &.add-col {
+      &::after {
+        content: "";
+        display: block;
+        margin-right: 1.2em !important;
+        margin-left: 1.2em !important;
+        @media (min-width: 600px) and (max-width: 781px) {
+          flex-basis: 42% !important;
+        }
+        @media (min-width: 782px) {
+          flex-basis: 44% !important;
+        }
+        @media (min-width: 922px) {
+          flex-basis: 29% !important;
+        }
+      }
+    }
+  }
+}
+
+/* Headings */
+
+.picto-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  &:before {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  &.sentinelle {
+    &:before {
+      content: url("../img/picto-heading-sentinelle.svg");
+    }
+  }
+
+  &.sos-juridique {
+    &:before {
+      content: url("../img/picto-heading-sos-juridique.svg");
+    }
+  }
+}
+
+/* Expert block */
+
+.entry-content .wp-block-media-text .wp-block-media-text__content {
+  padding: 0 0 0 5%;
 }

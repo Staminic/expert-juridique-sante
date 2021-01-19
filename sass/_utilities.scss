@@ -15,7 +15,7 @@
 }
 
 .mb-1 {
-  margin-bottom: 0.8em !important;
+  margin-bottom: 0.4em !important;
 }
 
 .mb-2 {
@@ -24,6 +24,11 @@
 
 .mx-auto {
   margin: 0 auto !important;
+}
+
+.mx-0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 
 /* Width */
@@ -71,6 +76,10 @@
   align-self: center;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 /* Typographie */
 blockquote {
   margin: 0;
@@ -100,5 +109,36 @@ blockquote {
     height: 1px;
     margin: 0.5em auto;
     background-color: $brand-orange;
+  }
+
+  &.text-align-left {
+    width: 80%;
+    text-align: left;
+
+    &::before {
+      margin-left: 5%;
+    }
+
+    &::after {
+      margin-left: 5%;
+    }
+  }
+}
+
+.text-brand-blue {
+  color: $brand-blue !important;
+}
+
+.text-brand-orange {
+  color: $brand-orange !important;
+}
+
+.text-serif {
+  font-family: $font-family-serif;
+}
+
+.entry-content {
+  ul {
+    margin-left: 1em;
   }
 }
