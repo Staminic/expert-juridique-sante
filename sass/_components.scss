@@ -340,6 +340,7 @@
   align-items: center;
   margin-bottom: 2em;
   padding: 1.2em;
+  padding-bottom: 0;
   font-size: $h3-font-size;
   @media (max-width: 921px) {
     font-size: 22px;
@@ -348,21 +349,28 @@
   font-weight: $font-weight-light;
   text-align: center;
 
+  p {
+    padding-bottom: 1.2em;
+  }
+
   &.lead-spacer {
-    position: relative;
-    border-bottom: 1px solid $brand-orange;
-    &:after {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 20px;
-      height: 20px;
-      left: 50%;
-      bottom: -11px;
-      transform: translateX(-50%) rotate(45deg);
-      background-color: $light-beige;
-      border-right: 1px solid $brand-orange;
+    p {
+      position: relative;
       border-bottom: 1px solid $brand-orange;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        bottom: -11px;
+        transform: translateX(-50%) rotate(45deg);
+        background-color: $light-beige;
+        border-right: 1px solid $brand-orange;
+        border-bottom: 1px solid $brand-orange;
+      }
     }
   }
 }
@@ -382,6 +390,7 @@
 .wp-block-columns {
   &.cols-3 {
     flex-wrap: wrap;
+    justify-content: center;
 
     .wp-block-column {
       margin-right: 1.2em !important;
@@ -389,37 +398,68 @@
       margin-left: 1.2em !important;
       @media (min-width: 600px) and (max-width: 781px) {
         flex-basis: 42% !important;
+        max-width: 42%;
       }
       @media (min-width: 782px) {
         flex-basis: 44% !important;
+        max-width: 44%;
       }
       @media (min-width: 922px) {
-        flex-basis: 29% !important;
+        flex-basis: 28% !important;
+        max-width: 28%;
       }
     }
 
-    &.add-col {
-      &::after {
-        content: "";
-        display: block;
-        margin-right: 1.2em !important;
-        margin-left: 1.2em !important;
-        @media (min-width: 600px) and (max-width: 781px) {
-          flex-basis: 42% !important;
-        }
-        @media (min-width: 782px) {
-          flex-basis: 44% !important;
-        }
-        @media (min-width: 922px) {
-          flex-basis: 29% !important;
-        }
+    // &.add-col {
+    //   &::after {
+    //     content: "";
+    //     display: block;
+    //     margin-right: 1.2em !important;
+    //     margin-left: 1.2em !important;
+    //     @media (min-width: 600px) and (max-width: 781px) {
+    //       flex-basis: 42% !important;
+    //     }
+    //     @media (min-width: 782px) {
+    //       flex-basis: 44% !important;
+    //     }
+    //     @media (min-width: 922px) {
+    //       flex-basis: 29% !important;
+    //     }
+    //   }
+    // }
+  }
+
+  &.cols-4 {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .wp-block-column {
+      margin-right: 1.2em !important;
+      margin-bottom: 1.2em !important;
+      margin-left: 1.2em !important;
+      @media (min-width: 600px) and (max-width: 781px) {
+        flex-basis: 42% !important;
+        max-width: 42%;
       }
+      @media (min-width: 782px) {
+        flex-basis: 44% !important;
+        max-width: 44%;
+      }
+      @media (min-width: 922px) {
+        flex-basis: 19% !important;
+        max-width: 19%;
+      }
+    }
+  }
+
+  &.partners {
+    h2 {
+      text-transform: uppercase;
     }
   }
 }
 
 /* Headings */
-
 .picto-heading {
   display: flex;
   align-items: center;
@@ -443,10 +483,82 @@
       content: url("../img/picto-heading-sos-juridique.svg");
     }
   }
+
+  &.picto-star {
+    align-items: flex-start;
+    margin-left: -45px;
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-star.svg");
+    }
+  }
+}
+
+.post-5995 {
+  // Sentinelle
+  .entry-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    &::before {
+      width: 60px;
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      content: url("../img/picto-heading-sentinelle.svg");
+    }
+  }
 }
 
 /* Expert block */
-
 .entry-content .wp-block-media-text .wp-block-media-text__content {
   padding: 0 0 0 5%;
+}
+
+/* Image with fading effect */
+.img-fading {
+  position: relative;
+  margin-top: 60px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 251, 245, 1) 0%,
+      rgba(255, 251, 245, 0.9) 10%,
+      rgba(255, 251, 245, 0) 100%
+    );
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48%;
+    height: 100%;
+    background: linear-gradient(
+      to left,
+      rgba(255, 251, 245, 1) 0%,
+      rgba(255, 251, 245, 0.9) 10%,
+      rgba(255, 251, 245, 0) 100%
+    );
+  }
+}
+
+/* Insert */
+.insert {
+  background-color: $white;
+  border: 1px solid #ece8e3;
 }

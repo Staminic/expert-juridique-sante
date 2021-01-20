@@ -1,7 +1,7 @@
 /* Colors */
 /* Typography*/
 .site {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   min-height: 100vh;
 }
@@ -46,7 +46,7 @@
   }
 }
 @media (min-width: 782px) {
-  .wp-block-group.alignwide.sos-juridique {
+  .wp-block-group.alignwide.no-border {
     border-bottom: none;
   }
 }
@@ -211,6 +211,10 @@ blockquote.text-align-left::after {
 
 .text-serif {
   font-family: "Source Serif Pro", serif;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 .entry-content ul {
@@ -493,6 +497,7 @@ blockquote.text-align-left::after {
   align-items: center;
   margin-bottom: 2em;
   padding: 1.2em;
+  padding-bottom: 0;
   font-size: 34px;
   font-weight: 300;
   text-align: center;
@@ -502,11 +507,14 @@ blockquote.text-align-left::after {
     font-size: 22px;
   }
 }
-.lead.lead-spacer {
+.lead p {
+  padding-bottom: 1.2em;
+}
+.lead.lead-spacer p {
   position: relative;
   border-bottom: 1px solid #ed7f47;
 }
-.lead.lead-spacer:after {
+.lead.lead-spacer p:after {
   content: "";
   position: absolute;
   display: block;
@@ -532,6 +540,7 @@ blockquote.text-align-left::after {
 /* Custom comumns */
 .wp-block-columns.cols-3 {
   flex-wrap: wrap;
+  justify-content: center;
 }
 .wp-block-columns.cols-3 .wp-block-column {
   margin-right: 1.2em !important;
@@ -541,38 +550,50 @@ blockquote.text-align-left::after {
 @media (min-width: 600px) and (max-width: 781px) {
   .wp-block-columns.cols-3 .wp-block-column {
     flex-basis: 42% !important;
+    max-width: 42%;
   }
 }
 @media (min-width: 782px) {
   .wp-block-columns.cols-3 .wp-block-column {
     flex-basis: 44% !important;
+    max-width: 44%;
   }
 }
 @media (min-width: 922px) {
   .wp-block-columns.cols-3 .wp-block-column {
-    flex-basis: 29% !important;
+    flex-basis: 28% !important;
+    max-width: 28%;
   }
 }
-.wp-block-columns.cols-3.add-col::after {
-  content: "";
-  display: block;
+.wp-block-columns.cols-4 {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.wp-block-columns.cols-4 .wp-block-column {
   margin-right: 1.2em !important;
+  margin-bottom: 1.2em !important;
   margin-left: 1.2em !important;
 }
 @media (min-width: 600px) and (max-width: 781px) {
-  .wp-block-columns.cols-3.add-col::after {
+  .wp-block-columns.cols-4 .wp-block-column {
     flex-basis: 42% !important;
+    max-width: 42%;
   }
 }
 @media (min-width: 782px) {
-  .wp-block-columns.cols-3.add-col::after {
+  .wp-block-columns.cols-4 .wp-block-column {
     flex-basis: 44% !important;
+    max-width: 44%;
   }
 }
 @media (min-width: 922px) {
-  .wp-block-columns.cols-3.add-col::after {
-    flex-basis: 29% !important;
+  .wp-block-columns.cols-4 .wp-block-column {
+    flex-basis: 19% !important;
+    max-width: 19%;
   }
+}
+.wp-block-columns.partners h2 {
+  text-transform: uppercase;
 }
 
 /* Headings */
@@ -593,10 +614,65 @@ blockquote.text-align-left::after {
 .picto-heading.sos-juridique:before {
   content: url("../img/picto-heading-sos-juridique.svg");
 }
+.picto-heading.picto-star {
+  align-items: flex-start;
+  margin-left: -45px;
+}
+.picto-heading.picto-star:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-star.svg");
+}
+
+.post-5995 .entry-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.post-5995 .entry-title::before {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  content: url("../img/picto-heading-sentinelle.svg");
+}
 
 /* Expert block */
 .entry-content .wp-block-media-text .wp-block-media-text__content {
   padding: 0 0 0 5%;
+}
+
+/* Image with fading effect */
+.img-fading {
+  position: relative;
+  margin-top: 60px;
+}
+.img-fading::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48%;
+  height: 100%;
+  background: linear-gradient(to right, #fffbf5 0%, rgba(255, 251, 245, 0.9) 10%, rgba(255, 251, 245, 0) 100%);
+}
+.img-fading::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48%;
+  height: 100%;
+  background: linear-gradient(to left, #fffbf5 0%, rgba(255, 251, 245, 0.9) 10%, rgba(255, 251, 245, 0) 100%);
+}
+
+/* Insert */
+.insert {
+  background-color: #ffffff;
+  border: 1px solid #ece8e3;
 }
 
 body {
@@ -621,7 +697,11 @@ h6 {
 }
 
 .h4 {
-  font-size: 27px;
+  font-size: 27px !important;
+}
+
+.h5 {
+  font-size: 20px !important;
 }
 
 a,

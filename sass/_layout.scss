@@ -1,5 +1,5 @@
 .site {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   min-height: 100vh;
 }
@@ -46,7 +46,7 @@
     border-bottom: 1px dashed $brand-blue;
   }
 
-  &.sos-juridique {
+  &.no-border {
     @media (min-width: 782px) {
       border-bottom: none;
     }

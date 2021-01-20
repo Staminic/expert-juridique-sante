@@ -30,17 +30,21 @@
 
 	<header class="entry-header <?php astra_entry_header_class(); ?>">
 		<div class="entry-title-container">
-			<?php
-			astra_the_title(
-				'<h1 class="entry-title" ' . astra_attr(
-					'article-title-content-page',
-					array(
-						'class' => '',
-					)
-				) . '>',
-				'</h1>'
-			);
-			?>
+			<?php if ( $post->post_parent == '5777' ) : ?>
+				<h2 class="entry-title h1" itemprop="headline">Nos experts</h2>
+			<?php else : ?>
+				<?php
+				astra_the_title(
+					'<h1 class="entry-title" ' . astra_attr(
+						'article-title-content-page',
+						array(
+							'class' => '',
+						)
+					) . '>',
+					'</h1>'
+				);
+				?>
+			<?php endif; ?>
 		</div>
 	</header><!-- .entry-header -->
 

@@ -137,6 +137,10 @@ blockquote {
   font-family: $font-family-serif;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 .entry-content {
   ul {
     margin-left: 1em;
