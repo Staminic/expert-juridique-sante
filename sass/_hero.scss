@@ -1,0 +1,69 @@
+#post-5703 {
+  // Présentation
+  .hero {
+    background-image: url("../img/hero/droit-medecine-small.jpg");
+
+    @media (min-width: 600px) {
+      background-image: url("../img/hero/droit-medecine.jpg");
+    }
+  }
+}
+
+#post-5741 {
+  // Métiers
+  .hero {
+    background-image: url("../img/hero/ambiance-metiers-small.jpg");
+
+    @media (min-width: 600px) {
+      background-image: url("../img/hero/ambiance-metiers.jpg");
+    }
+  }
+}
+
+#post-5777,
+#post-5805,
+#post-5826,
+#post-5828,
+#post-5830 {
+  // Experts
+  .hero {
+    background-image: url("../img/hero/ambiance-experts-small.jpg");
+
+    @media (min-width: 600px) {
+      background-image: url("../img/hero/ambiance-experts.jpg");
+    }
+  }
+}
+
+#post-5837 {
+  // Engagements
+  .hero {
+    background-image: url("../img/hero/ambiance-engagements-small.jpg");
+
+    @media (min-width: 600px) {
+      background-image: url("../img/hero/ambiance-engagements.jpg");
+    }
+  }
+}
+
+#post-5852 {
+  // Partenaires
+  .hero {
+    background-image: url("../img/hero/ambiance-partenaires-small.jpg");
+
+    @media (min-width: 600px) {
+      background-image: url("../img/hero/ambiance-partenaires.jpg");
+    }
+  }
+}
+
+#post-5877 {
+  // Recrutement
+  .hero {
+    background-image: url("../img/hero/ambiance-recrutement-small.jpg");
+
+    @media (min-width: 600px) {
+      background-image: url("../img/hero/ambiance-recrutement.jpg");
+    }
+  }
+}

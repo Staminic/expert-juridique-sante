@@ -326,6 +326,9 @@ blockquote.text-align-left::after {
   margin-right: 5px;
   line-height: 0;
 }
+.wp-block-buttons .wp-block-button.back-button a:focus {
+  text-decoration: none;
+}
 
 /* Stats */
 @media (min-width: 922px) {
@@ -456,27 +459,23 @@ blockquote.text-align-left::after {
   display: flex;
   justify-content: center;
   margin-bottom: 0 !important;
-  padding-top: 175px;
+  padding-top: 185px;
 }
 @media (min-width: 922px) {
   .entry-header {
-    padding-top: 405px;
+    padding-top: 420px;
   }
 }
 
-.entry-title-container {
-  width: 90%;
-  min-height: 100px;
-}
-@media (min-width: 922px) {
+@media (min-width: 600px) {
   .entry-title-container {
     width: 780px;
   }
 }
 
 .entry-title {
-  margin: 0;
-  padding: 1em 1em 0 1em;
+  margin: 0 !important;
+  padding: 0.75em 1em 0 1em;
   background-color: #fffbf5;
   color: #ed7f47;
   font-family: "Source Serif Pro", serif;
@@ -639,8 +638,32 @@ blockquote.text-align-left::after {
 }
 
 /* Expert block */
-.entry-content .wp-block-media-text .wp-block-media-text__content {
-  padding: 0 0 0 5%;
+@media (max-width: 781px) {
+  .wp-block-columns.team .wp-block-column,
+.wp-block-group.team .wp-block-column {
+    flex-basis: auto !important;
+    margin-bottom: 2.5em !important;
+  }
+}
+.wp-block-columns.team .wp-block-media-text__media,
+.wp-block-group.team .wp-block-media-text__media {
+  max-width: 150px;
+}
+@media (max-width: 599px) {
+  .wp-block-columns.team .wp-block-media-text__media img,
+.wp-block-group.team .wp-block-media-text__media img {
+    margin-bottom: 1em;
+  }
+}
+.wp-block-columns.team .wp-block-media-text .wp-block-media-text__content,
+.wp-block-group.team .wp-block-media-text .wp-block-media-text__content {
+  padding: 0 !important;
+}
+@media (min-width: 600px) {
+  .wp-block-columns.team .wp-block-media-text .wp-block-media-text__content,
+.wp-block-group.team .wp-block-media-text .wp-block-media-text__content {
+    padding: 0 0 0 5% !important;
+  }
 }
 
 /* Image with fading effect */
@@ -648,25 +671,32 @@ blockquote.text-align-left::after {
   position: relative;
   margin-top: 60px;
 }
-.img-fading::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 48%;
-  height: 100%;
-  background: linear-gradient(to right, #fffbf5 0%, rgba(255, 251, 245, 0.9) 10%, rgba(255, 251, 245, 0) 100%);
+.img-fading img {
+  height: 190px;
+  object-fit: cover;
+  object-position: center;
 }
-.img-fading::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 48%;
-  height: 100%;
-  background: linear-gradient(to left, #fffbf5 0%, rgba(255, 251, 245, 0.9) 10%, rgba(255, 251, 245, 0) 100%);
+@media (min-width: 600px) {
+  .img-fading::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48%;
+    height: 100%;
+    background: linear-gradient(to right, #fffbf5 0%, rgba(255, 251, 245, 0.9) 10%, rgba(255, 251, 245, 0) 100%);
+  }
+  .img-fading::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48%;
+    height: 100%;
+    background: linear-gradient(to left, #fffbf5 0%, rgba(255, 251, 245, 0.9) 10%, rgba(255, 251, 245, 0) 100%);
+  }
 }
 
 /* Insert */
@@ -866,5 +896,67 @@ a:focus {
   background-color: #3f2794;
   color: #ffffff;
   font-size: 80%;
+}
+
+#post-5703 .hero {
+  background-image: url("../img/hero/droit-medecine-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5703 .hero {
+    background-image: url("../img/hero/droit-medecine.jpg");
+  }
+}
+
+#post-5741 .hero {
+  background-image: url("../img/hero/ambiance-metiers-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5741 .hero {
+    background-image: url("../img/hero/ambiance-metiers.jpg");
+  }
+}
+
+#post-5777 .hero,
+#post-5805 .hero,
+#post-5826 .hero,
+#post-5828 .hero,
+#post-5830 .hero {
+  background-image: url("../img/hero/ambiance-experts-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5777 .hero,
+#post-5805 .hero,
+#post-5826 .hero,
+#post-5828 .hero,
+#post-5830 .hero {
+    background-image: url("../img/hero/ambiance-experts.jpg");
+  }
+}
+
+#post-5837 .hero {
+  background-image: url("../img/hero/ambiance-engagements-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5837 .hero {
+    background-image: url("../img/hero/ambiance-engagements.jpg");
+  }
+}
+
+#post-5852 .hero {
+  background-image: url("../img/hero/ambiance-partenaires-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5852 .hero {
+    background-image: url("../img/hero/ambiance-partenaires.jpg");
+  }
+}
+
+#post-5877 .hero {
+  background-image: url("../img/hero/ambiance-recrutement-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5877 .hero {
+    background-image: url("../img/hero/ambiance-recrutement.jpg");
+  }
 }
 /*# sourceMappingURL=main.css.map */

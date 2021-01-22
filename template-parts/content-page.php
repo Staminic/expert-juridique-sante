@@ -26,7 +26,9 @@
 
 	<?php astra_entry_top(); ?>
 	
-	<div class="hero" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>');"></div>
+	<!-- <div class="hero" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>');"></div> -->
+
+	<div class="hero"></div>
 
 	<header class="entry-header <?php astra_entry_header_class(); ?>">
 		<div class="entry-title-container">
