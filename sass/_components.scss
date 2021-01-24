@@ -490,12 +490,157 @@
 
   &.picto-star {
     align-items: flex-start;
-    margin-left: -45px;
+    @media (min-width: 922px) {
+      margin-left: -45px;
+    }
 
     &:before {
       width: auto;
       margin-top: 8px;
       content: url("../img/picto-star.svg");
+    }
+  }
+
+  &.picto-share {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -45px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-share.svg");
+    }
+  }
+
+  &.picto-cursor {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -45px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-cursor.svg");
+    }
+  }
+
+  &.picto-archive {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -70px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-archive.svg");
+    }
+  }
+
+  &.picto-award {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -45px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-award.svg");
+    }
+  }
+
+  &.picto-gears {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -45px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-gears.svg");
+    }
+  }
+
+  &.picto-diapason {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -52px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-diapason.svg");
+    }
+  }
+
+  &.picto-time {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -52px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-time.svg");
+    }
+  }
+
+  &.picto-team {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -52px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-team.svg");
+    }
+  }
+
+  &.picto-bulb {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -52px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-bulb.svg");
+    }
+  }
+
+  &.picto-puzzle {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -52px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-puzzle.svg");
+    }
+  }
+
+  &.picto-hammer {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -52px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-hammer.svg");
     }
   }
 }
@@ -597,6 +742,25 @@
 
 /* Insert */
 .insert {
+  padding-right: 1em;
+  padding-left: 1em;
   background-color: $white;
   border: 1px solid #ece8e3;
+
+  &.form {
+    @media (max-width: 921px) {
+      .wp-block-columns {
+        flex-wrap: wrap;
+      }
+
+      .wp-block-column {
+        flex-basis: 100% !important;
+
+        &.stat {
+          margin: 0;
+          order: -1;
+        }
+      }
+    }
+  }
 }

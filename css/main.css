@@ -615,12 +615,159 @@ blockquote.text-align-left::after {
 }
 .picto-heading.picto-star {
   align-items: flex-start;
-  margin-left: -45px;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-star {
+    margin-left: -45px;
+  }
 }
 .picto-heading.picto-star:before {
   width: auto;
   margin-top: 8px;
   content: url("../img/picto-star.svg");
+}
+.picto-heading.picto-share {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-share {
+    margin-left: -45px;
+  }
+}
+.picto-heading.picto-share:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-share.svg");
+}
+.picto-heading.picto-cursor {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-cursor {
+    margin-left: -45px;
+  }
+}
+.picto-heading.picto-cursor:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-cursor.svg");
+}
+.picto-heading.picto-archive {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-archive {
+    margin-left: -70px;
+  }
+}
+.picto-heading.picto-archive:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-archive.svg");
+}
+.picto-heading.picto-award {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-award {
+    margin-left: -45px;
+  }
+}
+.picto-heading.picto-award:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-award.svg");
+}
+.picto-heading.picto-gears {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-gears {
+    margin-left: -45px;
+  }
+}
+.picto-heading.picto-gears:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-gears.svg");
+}
+.picto-heading.picto-diapason {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-diapason {
+    margin-left: -52px;
+  }
+}
+.picto-heading.picto-diapason:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-diapason.svg");
+}
+.picto-heading.picto-time {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-time {
+    margin-left: -52px;
+  }
+}
+.picto-heading.picto-time:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-time.svg");
+}
+.picto-heading.picto-team {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-team {
+    margin-left: -52px;
+  }
+}
+.picto-heading.picto-team:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-team.svg");
+}
+.picto-heading.picto-bulb {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-bulb {
+    margin-left: -52px;
+  }
+}
+.picto-heading.picto-bulb:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-bulb.svg");
+}
+.picto-heading.picto-puzzle {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-puzzle {
+    margin-left: -52px;
+  }
+}
+.picto-heading.picto-puzzle:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-puzzle.svg");
+}
+.picto-heading.picto-hammer {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-hammer {
+    margin-left: -52px;
+  }
+}
+.picto-heading.picto-hammer:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-hammer.svg");
 }
 
 .post-5995 .entry-title {
@@ -701,8 +848,22 @@ blockquote.text-align-left::after {
 
 /* Insert */
 .insert {
+  padding-right: 1em;
+  padding-left: 1em;
   background-color: #ffffff;
   border: 1px solid #ece8e3;
+}
+@media (max-width: 921px) {
+  .insert.form .wp-block-columns {
+    flex-wrap: wrap;
+  }
+  .insert.form .wp-block-column {
+    flex-basis: 100% !important;
+  }
+  .insert.form .wp-block-column.stat {
+    margin: 0;
+    order: -1;
+  }
 }
 
 body {
@@ -741,6 +902,43 @@ a:focus {
 
 .read-more a {
   text-decoration: none;
+}
+
+.sample-link {
+  margin: 0.5em !important;
+}
+.sample-link a {
+  color: #ed7f47;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: inherit;
+  text-transform: none;
+  text-decoration: none;
+}
+
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=search],
+input[type=reset],
+input[type=tel],
+select,
+textarea {
+  background-color: #ffffff;
+}
+
+.menu-toggle,
+button,
+.ast-button,
+.ast-custom-button,
+.button,
+input#submit,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  background-color: #ed7f47;
+  border-color: #ed7f47;
 }
 
 .site-header {
@@ -957,6 +1155,141 @@ a:focus {
 @media (min-width: 600px) {
   #post-5877 .hero {
     background-image: url("../img/hero/ambiance-recrutement.jpg");
+  }
+}
+
+#post-5886 .hero {
+  background-image: url("../img/hero/ambiance-expertises-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5886 .hero {
+    background-image: url("../img/hero/ambiance-expertises.jpg");
+  }
+}
+
+#post-5906 .hero {
+  background-image: url("../img/hero/ressources-humaines-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5906 .hero {
+    background-image: url("../img/hero/ressources-humaines.jpg");
+  }
+}
+
+#post-5926 .hero {
+  background-image: url("../img/hero/ethique-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5926 .hero {
+    background-image: url("../img/hero/ethique.jpg");
+  }
+}
+
+#post-5932 .hero {
+  background-image: url("../img/hero/affaires-medicales-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5932 .hero {
+    background-image: url("../img/hero/affaires-medicales.jpg");
+  }
+}
+
+#post-5935 .hero {
+  background-image: url("../img/hero/droit-hospitalier-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5935 .hero {
+    background-image: url("../img/hero/droit-hospitalier.jpg");
+  }
+}
+
+#post-5937 .hero {
+  background-image: url("../img/hero/finances-budget-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5937 .hero {
+    background-image: url("../img/hero/finances-budget.jpg");
+  }
+}
+
+#post-5948 .hero {
+  background-image: url("../img/hero/acteurs-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5948 .hero {
+    background-image: url("../img/hero/acteurs.jpg");
+  }
+}
+
+#post-5951 .hero {
+  background-image: url("../img/hero/etablissements-de-sante-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5951 .hero {
+    background-image: url("../img/hero/etablissements-de-sante.jpg");
+  }
+}
+
+#post-5955 .hero {
+  background-image: url("../img/hero/etablissements-medico-sociaux-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5955 .hero {
+    background-image: url("../img/hero/etablissements-medico-sociaux.jpg");
+  }
+}
+
+#post-5959 .hero {
+  background-image: url("../img/hero/institutions-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5959 .hero {
+    background-image: url("../img/hero/institutions.jpg");
+  }
+}
+
+#post-5976 .hero {
+  background-image: url("../img/hero/solutions-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5976 .hero {
+    background-image: url("../img/hero/solutions.jpg");
+  }
+}
+
+#post-5995 .hero {
+  background-image: url("../img/hero/sentinelle-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5995 .hero {
+    background-image: url("../img/hero/sentinelle.jpg");
+  }
+}
+
+#post-6013 .hero {
+  background-image: url("../img/hero/focus-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-6013 .hero {
+    background-image: url("../img/hero/focus.jpg");
+  }
+}
+
+#post-6015 .hero {
+  background-image: url("../img/hero/sos-juridique-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-6015 .hero {
+    background-image: url("../img/hero/sos-juridique.jpg");
+  }
+}
+
+#post-6024 .hero {
+  background-image: url("../img/hero/audi-juridique-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-6024 .hero {
+    background-image: url("../img/hero/audit-juridique.jpg");
   }
 }
 /*# sourceMappingURL=main.css.map */

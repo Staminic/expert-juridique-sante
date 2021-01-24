@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54.147" height="51.193" viewBox="0 0 54.147 51.193">
+  <g id="picto-archive" transform="matrix(0.966, -0.259, 0.259, 0.966, -34.334, -34.642)">
+    <g id="Groupe_442" data-name="Groupe 442" transform="translate(22.322 54.767)">
+      <path id="Tracé_36" data-name="Tracé 36" d="M41.4,89.2a5.506,5.506,0,0,0-4.189-1.862H22.322V57.561h4.652M65.126,80.824A8.376,8.376,0,0,1,56.751,89.2h0a8.5,8.5,0,0,1-3.434-.735,8.375,8.375,0,1,1,11.807-7.64ZM50.734,87.337l-2.647,2.429L44.654,92.92M60.472,57.561h4.654V70.427m-21.4,13.536a7.013,7.013,0,0,0-3.892-1.278H26.974V54.769H40a4.959,4.959,0,0,1,3.723,1.545,4.952,4.952,0,0,1,3.721-1.545H60.474v12.5" transform="translate(-22.322 -54.767)" fill="none" stroke="#42a1c2" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.29"/>
+      <line id="Ligne_47" data-name="Ligne 47" x1="9.316" transform="translate(23.68 7.581)" fill="none" stroke="#42a1c2" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.74"/>
+      <line id="Ligne_48" data-name="Ligne 48" x1="9.316" transform="translate(23.68 13.886)" fill="none" stroke="#42a1c2" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.74"/>
+      <line id="Ligne_49" data-name="Ligne 49" x1="8.896" transform="translate(9.809 7.581)" fill="none" stroke="#42a1c2" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.74"/>
+      <line id="Ligne_50" data-name="Ligne 50" x1="8.896" transform="translate(9.809 13.886)" fill="none" stroke="#42a1c2" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.74"/>
+      <line id="Ligne_51" data-name="Ligne 51" x1="8.896" transform="translate(9.809 20.611)" fill="none" stroke="#42a1c2" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.74"/>
+    </g>
+  </g>
+</svg>
