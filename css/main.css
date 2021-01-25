@@ -817,6 +817,7 @@ blockquote.text-align-left::after {
 .img-fading {
   position: relative;
   margin-top: 60px;
+  margin-bottom: 0;
 }
 .img-fading img {
   height: 190px;
@@ -997,6 +998,11 @@ input[type=reset] {
   line-height: 1.5;
 }
 
+@media (min-width: 922px) {
+  .mega-sub-menu {
+    margin-top: 10px !important;
+  }
+}
 @media (max-width: 921px) {
   #mega-menu-wrap-primary #mega-menu-primary .mega-menu-item.first-level {
     padding-top: 25px;
@@ -1094,6 +1100,17 @@ input[type=reset] {
   background-color: #3f2794;
   color: #ffffff;
   font-size: 80%;
+}
+
+#post-5427 .hero,
+#post-6132 .hero {
+  background-image: url("../img/hero/ambiance-accueil-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5427 .hero,
+#post-6132 .hero {
+    background-image: url("../img/hero/ambiance-accueil.jpg");
+  }
 }
 
 #post-5703 .hero {
@@ -1212,6 +1229,15 @@ input[type=reset] {
   }
 }
 
+#post-5939 .hero {
+  background-image: url("../img/hero/achats-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5939 .hero {
+    background-image: url("../img/hero/achats.jpg");
+  }
+}
+
 #post-5948 .hero {
   background-image: url("../img/hero/acteurs-small.jpg");
 }
@@ -1236,6 +1262,15 @@ input[type=reset] {
 @media (min-width: 600px) {
   #post-5955 .hero {
     background-image: url("../img/hero/etablissements-medico-sociaux.jpg");
+  }
+}
+
+#post-5957 .hero {
+  background-image: url("../img/hero/groupements-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5957 .hero {
+    background-image: url("../img/hero/groupements.jpg");
   }
 }
 

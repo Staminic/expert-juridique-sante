@@ -1,3 +1,15 @@
+#post-5427,
+#post-6132 {
+  // Accueil
+  .hero {
+    background-image: url("../img/hero/ambiance-accueil-small.jpg");
+
+    @media (min-width: 600px) {
+      background-image: url("../img/hero/ambiance-accueil.jpg");
+    }
+  }
+}
+
 #post-5703 {
   // Présentation
   .hero {
@@ -134,6 +146,17 @@
   }
 }
 
+#post-5939 {
+  // Achats
+  .hero {
+    background-image: url("../img/hero/achats-small.jpg");
+
+    @media (min-width: 600px) {
+      background-image: url("../img/hero/achats.jpg");
+    }
+  }
+}
+
 #post-5948 {
   // Acteurs
   .hero {
@@ -163,6 +186,17 @@
 
     @media (min-width: 600px) {
       background-image: url("../img/hero/etablissements-medico-sociaux.jpg");
+    }
+  }
+}
+
+#post-5957 {
+  // Groupements hospitaliers
+  .hero {
+    background-image: url("../img/hero/groupements-small.jpg");
+
+    @media (min-width: 600px) {
+      background-image: url("../img/hero/groupements.jpg");
     }
   }
 }
