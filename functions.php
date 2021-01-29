@@ -79,3 +79,8 @@ if ( ! function_exists( 'astra_site_branding_markup' ) ) {
 	}
 }
 add_action( 'astra_masthead_content', 'astra_site_branding_markup', 8 );
+
+/**
+ * Remove single post navigation
+ */
+add_filter( 'astra_single_post_navigation_enabled', '__return_false' );

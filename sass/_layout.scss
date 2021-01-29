@@ -66,6 +66,20 @@
   }
 }
 
+/* Archive */
+.archive {
+  .site-main {
+    > .ast-row {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+
+  #primary {
+    margin-top: 0;
+  }
+}
+
 /* Footer */
 @media (max-width: 921px) {
   .footer-adv-widget-1,
