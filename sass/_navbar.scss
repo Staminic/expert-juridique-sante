@@ -25,6 +25,35 @@
 
   .ast-site-identity {
     padding: 0;
+
+    .custom-logo-link {
+      img {
+        @media (max-width: 972px) {
+          max-height: 50px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+.navbar-utilities {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  aside {
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  .btn {
+    padding: 7px 16px 7px 16px;
+    position: relative;
+    top: -3px;
+    background-color: $brand-blue;
+    color: $white;
+    text-decoration: none;
   }
 }
 
@@ -117,6 +146,20 @@
 
             .mega-menu-item {
               padding: 0;
+            }
+
+            [class*="mega-menu-item-custom_html"] {
+              text-align: center;
+
+              .btn {
+                display: inline-block;
+                margin-bottom: 1em;
+                padding: 6px 12px;
+                background-color: $brand-orange;
+                color: $white;
+                font-weight: bold;
+                text-decoration: none;
+              }
             }
           }
         }

@@ -71,6 +71,12 @@
   }
 }
 
+.mepr-account-form {
+  @media (min-width: 922px) {
+    width: 65%;
+  }
+}
+
 /* Flex */
 .align-items-center {
   align-items: center;

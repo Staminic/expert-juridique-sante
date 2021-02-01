@@ -70,9 +70,11 @@ if ( ! function_exists( 'astra_site_branding_markup' ) ) {
 				</div>
 			</div>
 
-			<?php if ( is_active_sidebar( 'header-widget' ) ) {
-				dynamic_sidebar( 'header-widget' );
-			} ?>
+			<?php if ( is_active_sidebar( 'header-widget' ) ) : ?>
+				<div class="navbar-utilities">
+					<?php dynamic_sidebar( 'header-widget' ); ?>
+				</div>
+			<?php endif; ?>
 
 		</div>
 		<?php
@@ -84,3 +86,43 @@ add_action( 'astra_masthead_content', 'astra_site_branding_markup', 8 );
  * Remove single post navigation
  */
 add_filter( 'astra_single_post_navigation_enabled', '__return_false' );
+
+/**
+ * Function to get Read More Link of Post
+ *
+ * @since 1.0.0
+ * @return html
+ */
+if ( ! function_exists( 'astra_post_link' ) ) {
+
+	/**
+	 * Function to get Read More Link of Post
+	 *
+	 * @param  string $output_filter Filter string.
+	 * @return html                Markup.
+	 */
+	function astra_post_link( $output_filter = '' ) {
+
+		$enabled = apply_filters( 'astra_post_link_enabled', '__return_true' );
+		if ( ( is_admin() && ! wp_doing_ajax() ) || ! $enabled ) {
+			return $output_filter;
+		}
+
+		$read_more_text    = apply_filters( 'astra_post_read_more', __( 'Read More &raquo;', 'astra' ) );
+		$read_more_classes = apply_filters( 'astra_post_read_more_class', array() );
+
+		$post_link = sprintf(
+			esc_html( '%s' ),
+			'<a class="' . esc_attr( implode( ' ', $read_more_classes ) ) . '" href="' . esc_url( get_permalink() ) . '"> ' . the_title( '<span class="screen-reader-text">', '</span>', false ) . ' ' . $read_more_text . '</a>'
+		);
+
+		$output = ' &hellip;<p class="read-more"> ' . $post_link . '</p>';
+
+		if ( 'publication' != get_post_type() ) {
+			return apply_filters( 'astra_post_link', $output, $output_filter );			
+		}	else {
+				return;			
+		}
+	}
+}
+add_filter( 'excerpt_more', 'astra_post_link', 1 );

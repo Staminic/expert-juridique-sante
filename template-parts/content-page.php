@@ -34,6 +34,8 @@
 		<div class="entry-title-container">
 			<?php if ( $post->post_parent == '5777' ) : ?>
 				<h2 class="entry-title h1" itemprop="headline">Nos experts</h2>
+			<?php elseif ( get_the_ID() === 6330 ) : // Login page?>
+				<h2 class="entry-title h1" itemprop="headline">Espace membre</h2>
 			<?php else : ?>
 				<?php
 				astra_the_title(
