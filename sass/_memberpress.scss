@@ -1,0 +1,18 @@
+/* Registration form */
+
+.mp-form-row.mepr_bold.mepr_price {
+  display: none;
+}
+
+.mp-form-row {
+  margin-bottom: 20px !important;
+}
+
+.memberpressproduct {
+  .entry-content {
+    @media (min-width: 922px) {
+      width: 65% !important;
+      margin: 60px auto 0 auto !important;
+    }
+  }
+}

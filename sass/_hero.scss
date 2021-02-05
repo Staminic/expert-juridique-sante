@@ -3,7 +3,8 @@
 .type-publication,
 .post-type-archive-publication,
 #post-6329, /* Compte */
-#post-6330 /* Connexion */ {
+#post-6330, /* Connexion */
+.search-results {
   // Accueil
   .hero {
     background-image: url("../img/hero/ambiance-accueil-small.jpg");
@@ -227,7 +228,8 @@
   }
 }
 
-#post-5995 {
+#post-5995,
+#post-10972 {
   // Sentinelle
   .hero {
     background-image: url("../img/hero/sentinelle-small.jpg");

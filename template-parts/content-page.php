@@ -29,28 +29,33 @@
 	<!-- <div class="hero" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>');"></div> -->
 
 	<div class="hero"></div>
+		
+	<?php if ( get_the_ID() !== 6331 ) : ?>
+		<header class="entry-header <?php astra_entry_header_class(); ?>">
+			<div class="entry-title-container">
+				<?php if ( $post->post_parent == '5777' ) : // Experts ?>
+					<h2 class="entry-title h1" itemprop="headline">Nos experts</h2>
+				<?php elseif ( get_the_ID() === 6330 ) : // Login page ?>
+					<h2 class="entry-title h1" itemprop="headline">Espace membre</h2>
+				<?php elseif ( $post->post_parent == '5995' ) : // Sentinelle ?>
+					<h2 class="entry-title h1" itemprop="headline">Sentinelle</h2>
+				<?php else : ?>
+					<?php
+					astra_the_title(
+						'<h1 class="entry-title" ' . astra_attr(
+							'article-title-content-page',
+							array(
+								'class' => '',
+							)
+						) . '>',
+						'</h1>'
+					);
+					?>
+				<?php endif; ?>
+			</div>
+		</header><!-- .entry-header -->
+	<?php endif; ?>
 
-	<header class="entry-header <?php astra_entry_header_class(); ?>">
-		<div class="entry-title-container">
-			<?php if ( $post->post_parent == '5777' ) : ?>
-				<h2 class="entry-title h1" itemprop="headline">Nos experts</h2>
-			<?php elseif ( get_the_ID() === 6330 ) : // Login page?>
-				<h2 class="entry-title h1" itemprop="headline">Espace membre</h2>
-			<?php else : ?>
-				<?php
-				astra_the_title(
-					'<h1 class="entry-title" ' . astra_attr(
-						'article-title-content-page',
-						array(
-							'class' => '',
-						)
-					) . '>',
-					'</h1>'
-				);
-				?>
-			<?php endif; ?>
-		</div>
-	</header><!-- .entry-header -->
 
 	<div class="entry-content clear" 
 		<?php

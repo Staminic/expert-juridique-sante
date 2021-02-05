@@ -32,11 +32,11 @@ a:focus {
   text-decoration: underline;
 }
 
-.read-more {
-  a {
-    text-decoration: none;
-  }
-}
+// .read-more {
+//   a {
+//     text-decoration: none;
+//   }
+// }
 
 .sample-link {
   margin: 0.5em !important;
@@ -61,6 +61,11 @@ input[type="tel"],
 select,
 textarea {
   background-color: $white;
+}
+
+.gform_wrapper legend.gfield_label,
+.gform_wrapper label.gfield_label {
+  font-weight: 400;
 }
 
 .menu-toggle,
