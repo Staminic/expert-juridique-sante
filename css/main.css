@@ -1031,7 +1031,6 @@ blockquote.text-align-left::after {
   text-align: center;
 }
 .for-subscribers-bottom-block > div {
-  max-width: 420px;
   padding: 1em 3em;
   background-color: #3f2794;
   border-radius: 7px;
@@ -1630,10 +1629,6 @@ input[type=reset] {
 }
 
 /* Registration form */
-.mp-form-row.mepr_bold.mepr_price {
-  display: none;
-}
-
 .mp-form-row {
   margin-bottom: 20px !important;
 }
