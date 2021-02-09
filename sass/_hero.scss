@@ -4,7 +4,8 @@
 .post-type-archive-publication,
 #post-6329, /* Compte */
 #post-6330, /* Connexion */
-.search-results {
+.search-results,
+#post-11050 /* Mentions légales */ {
   // Accueil
   .hero {
     background-image: url("../img/hero/ambiance-accueil-small.jpg");
@@ -165,10 +166,10 @@
 #post-5948 {
   // Acteurs
   .hero {
-    background-image: url("../img/hero/acteurs-small.jpg");
+    background-image: url("../img/hero/acteurs2-small.jpg");
 
     @media (min-width: 600px) {
-      background-image: url("../img/hero/acteurs.jpg");
+      background-image: url("../img/hero/acteurs2.jpg");
     }
   }
 }
@@ -220,16 +221,17 @@
 #post-5976 {
   // Solutions
   .hero {
-    background-image: url("../img/hero/solutions-small.jpg");
+    background-image: url("../img/hero/solutions2-small.jpg");
 
     @media (min-width: 600px) {
-      background-image: url("../img/hero/solutions.jpg");
+      background-image: url("../img/hero/solutions2.jpg");
     }
   }
 }
 
 #post-5995,
-#post-10972 {
+#post-10972,
+.tax-collection-publication.term-sentinelle {
   // Sentinelle
   .hero {
     background-image: url("../img/hero/sentinelle-small.jpg");
@@ -240,7 +242,8 @@
   }
 }
 
-#post-6013 {
+#post-6013,
+.tax-collection-publication.term-focus {
   // Focus
   .hero {
     background-image: url("../img/hero/focus-small.jpg");
@@ -269,6 +272,17 @@
 
     @media (min-width: 600px) {
       background-image: url("../img/hero/audit-juridique.jpg");
+    }
+  }
+}
+
+#post-5961 {
+  // Entreprise
+  .hero {
+    background-image: url("../img/hero/entreprises-small.jpg");
+
+    @media (min-width: 600px) {
+      background-image: url("../img/hero/entreprises.jpg");
     }
   }
 }

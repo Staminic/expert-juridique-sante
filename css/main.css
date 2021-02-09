@@ -638,6 +638,9 @@ blockquote.text-align-left::after {
 .picto-heading.sentinelle:before {
   content: url("../img/picto-heading-sentinelle.svg");
 }
+.picto-heading.focus:before {
+  content: url("../img/picto-heading-focus.svg");
+}
 .picto-heading.sos-juridique:before {
   content: url("../img/picto-heading-sos-juridique.svg");
 }
@@ -812,6 +815,48 @@ blockquote.text-align-left::after {
   content: url("../img/picto-heading-sentinelle.svg");
 }
 
+.post-6013 .entry-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.post-6013 .entry-title::before {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  content: url("../img/picto-heading-focus.svg");
+}
+
+.post-6015 .entry-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.post-6015 .entry-title::before {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  content: url("../img/picto-heading-sos-juridique.svg");
+}
+
+.post-6024 .entry-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.post-6024 .entry-title::before {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  content: url("../img/picto-heading-audit-juridique.svg");
+}
+
 /* Expert block */
 @media (max-width: 781px) {
   .wp-block-columns.team .wp-block-column,
@@ -924,8 +969,12 @@ blockquote.text-align-left::after {
   font-size: 16px;
 }
 
+.archive .tb-heading a {
+  color: #535353;
+}
 .archive .tag-list {
   margin-bottom: 1em;
+  color: #535353;
 }
 
 .blog-item-excerpt p {
@@ -1149,7 +1198,7 @@ h6 {
 
 a,
 a:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .sample-link {
@@ -1192,6 +1241,11 @@ input[type=submit],
 input[type=reset] {
   background-color: #ed7f47;
   border-color: #ed7f47;
+}
+
+/* Gravity Forms */
+.gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label {
+  font-size: inherit;
 }
 
 .site-header {
@@ -1396,7 +1450,8 @@ input[type=reset] {
 .post-type-archive-publication .hero,
 #post-6329 .hero,
 #post-6330 .hero,
-.search-results .hero {
+.search-results .hero,
+#post-11050 .hero {
   background-image: url("../img/hero/ambiance-accueil-small.jpg");
 }
 @media (min-width: 600px) {
@@ -1406,7 +1461,8 @@ input[type=reset] {
 .post-type-archive-publication .hero,
 #post-6329 .hero,
 #post-6330 .hero,
-.search-results .hero {
+.search-results .hero,
+#post-11050 .hero {
     background-image: url("../img/hero/ambiance-accueil.jpg");
   }
 }
@@ -1537,11 +1593,11 @@ input[type=reset] {
 }
 
 #post-5948 .hero {
-  background-image: url("../img/hero/acteurs-small.jpg");
+  background-image: url("../img/hero/acteurs2-small.jpg");
 }
 @media (min-width: 600px) {
   #post-5948 .hero {
-    background-image: url("../img/hero/acteurs.jpg");
+    background-image: url("../img/hero/acteurs2.jpg");
   }
 }
 
@@ -1582,30 +1638,34 @@ input[type=reset] {
 }
 
 #post-5976 .hero {
-  background-image: url("../img/hero/solutions-small.jpg");
+  background-image: url("../img/hero/solutions2-small.jpg");
 }
 @media (min-width: 600px) {
   #post-5976 .hero {
-    background-image: url("../img/hero/solutions.jpg");
+    background-image: url("../img/hero/solutions2.jpg");
   }
 }
 
 #post-5995 .hero,
-#post-10972 .hero {
+#post-10972 .hero,
+.tax-collection-publication.term-sentinelle .hero {
   background-image: url("../img/hero/sentinelle-small.jpg");
 }
 @media (min-width: 600px) {
   #post-5995 .hero,
-#post-10972 .hero {
+#post-10972 .hero,
+.tax-collection-publication.term-sentinelle .hero {
     background-image: url("../img/hero/sentinelle.jpg");
   }
 }
 
-#post-6013 .hero {
+#post-6013 .hero,
+.tax-collection-publication.term-focus .hero {
   background-image: url("../img/hero/focus-small.jpg");
 }
 @media (min-width: 600px) {
-  #post-6013 .hero {
+  #post-6013 .hero,
+.tax-collection-publication.term-focus .hero {
     background-image: url("../img/hero/focus.jpg");
   }
 }
@@ -1628,6 +1688,15 @@ input[type=reset] {
   }
 }
 
+#post-5961 .hero {
+  background-image: url("../img/hero/entreprises-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-5961 .hero {
+    background-image: url("../img/hero/entreprises.jpg");
+  }
+}
+
 /* Registration form */
 .mp-form-row {
   margin-bottom: 20px !important;
@@ -1638,5 +1707,9 @@ input[type=reset] {
     width: 65% !important;
     margin: 60px auto 0 auto !important;
   }
+}
+
+.mepr-unauthorized-message + .mepr-login-form-wrap {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

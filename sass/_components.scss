@@ -492,6 +492,12 @@
     }
   }
 
+  &.focus {
+    &:before {
+      content: url("../img/picto-heading-focus.svg");
+    }
+  }
+
   &.sos-juridique {
     &:before {
       content: url("../img/picto-heading-sos-juridique.svg");
@@ -673,6 +679,60 @@
   }
 }
 
+.post-6013 {
+  // Focus
+  .entry-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    &::before {
+      width: 60px;
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      content: url("../img/picto-heading-focus.svg");
+    }
+  }
+}
+
+.post-6015 {
+  // SOS Juridique
+  .entry-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    &::before {
+      width: 60px;
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      content: url("../img/picto-heading-sos-juridique.svg");
+    }
+  }
+}
+
+.post-6024 {
+  // Audit juridique
+  .entry-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    &::before {
+      width: 40px;
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      content: url("../img/picto-heading-audit-juridique.svg");
+    }
+  }
+}
+
 /* Expert block */
 
 .wp-block-columns,
@@ -811,8 +871,15 @@
 }
 
 .archive {
+  .tb-heading {
+    a {
+      color: $dark-grey;
+    }
+  }
+
   .tag-list {
     margin-bottom: 1em;
+    color: $dark-grey;
   }
 }
 
@@ -935,6 +1002,11 @@
     }
   }
 }
+
+// .tax-collection-publication .intro,
+// .tax-collection-publication .publication-search-form {
+//   display: none;
+// }
 
 /* Protected content alert */
 .for-subscribers-top-block {

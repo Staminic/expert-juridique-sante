@@ -16,3 +16,7 @@
     }
   }
 }
+
+.mepr-unauthorized-message + .mepr-login-form-wrap {
+  display: none;
+}
