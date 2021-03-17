@@ -242,6 +242,17 @@ blockquote.text-align-left::after {
   margin-left: 1em;
 }
 
+.angle-before a {
+  text-decoration: underline;
+}
+.angle-before a::before {
+  content: url("../img/angle-before.svg");
+  display: inline-block;
+  width: 9px;
+  margin-right: 5px;
+  line-height: 0;
+}
+
 /* Solution blocks */
 .solution-block {
   margin-right: 0 !important;
@@ -857,6 +868,10 @@ blockquote.text-align-left::after {
   content: url("../img/picto-heading-audit-juridique.svg");
 }
 
+.topic-list .picto-heading {
+  justify-content: center;
+}
+
 /* Expert block */
 @media (max-width: 781px) {
   .wp-block-columns.team .wp-block-column,
@@ -969,10 +984,12 @@ blockquote.text-align-left::after {
   font-size: 16px;
 }
 
-.archive .tb-heading a {
+.archive .tb-heading a,
+.publication-view .tb-heading a {
   color: #535353;
 }
-.archive .tag-list {
+.archive .tag-list,
+.publication-view .tag-list {
   margin-bottom: 1em;
   color: #535353;
 }
@@ -1061,6 +1078,28 @@ blockquote.text-align-left::after {
   margin-right: 5px;
   content: url("../img/picto-focus-grey-small.svg");
   width: 25px;
+}
+
+/* Term lists */
+.topic-item-list {
+  margin-left: 0 !important;
+  list-style-type: none;
+}
+.topic-item-list .topic-item {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.topic-item-list .topic-item h3 {
+  font-size: 22px;
+}
+.topic-item-list .topic-item h3 .count {
+  display: inline-block;
+  margin: 10px;
+  padding: 1px 10px;
+  line-height: 1;
+  background-color: #e3dacf;
+  border-radius: 20px;
+  color: #9a9a9a;
 }
 
 /* Protected content alert */
@@ -1711,13 +1750,5 @@ input[type=reset] {
 
 .mepr-unauthorized-message + .mepr-login-form-wrap {
   display: none;
-}
-
-.select2-container .select2-selection--multiple .select2-selection__rendered {
-  margin: 0;
-}
-
-.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-  line-height: 1.5;
 }
 /*# sourceMappingURL=main.css.map */

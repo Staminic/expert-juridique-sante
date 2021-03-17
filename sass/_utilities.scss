@@ -156,3 +156,17 @@ blockquote {
     margin-left: 1em;
   }
 }
+
+.angle-before {
+  a {
+    text-decoration: underline;
+
+    &::before {
+      content: url("../img/angle-before.svg");
+      display: inline-block;
+      width: 9px;
+      margin-right: 5px;
+      line-height: 0;
+    }
+  }
+}

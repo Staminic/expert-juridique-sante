@@ -733,8 +733,13 @@
   }
 }
 
-/* Expert block */
+.topic-list {
+  .picto-heading {
+    justify-content: center;
+  }
+}
 
+/* Expert block */
 .wp-block-columns,
 .wp-block-group {
   &.team {
@@ -870,7 +875,8 @@
   font-size: 16px;
 }
 
-.archive {
+.archive,
+.publication-view {
   .tb-heading {
     a {
       color: $dark-grey;
@@ -1007,6 +1013,31 @@
 // .tax-collection-publication .publication-search-form {
 //   display: none;
 // }
+
+/* Term lists */
+.topic-item-list {
+  margin-left: 0 !important;
+  list-style-type: none;
+
+  .topic-item {
+    margin-bottom: 20px;
+    font-size: $lead-font-size;
+
+    h3 {
+      font-size: $lead-font-size;
+
+      .count {
+        display: inline-block;
+        margin: 10px;
+        padding: 1px 10px;
+        line-height: 1;
+        background-color: #e3dacf;
+        border-radius: 20px;
+        color: #9a9a9a;
+      }
+    }
+  }
+}
 
 /* Protected content alert */
 .for-subscribers-top-block {

@@ -24,17 +24,6 @@ function child_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 
 /**
- * Enqueue Select2JS
- */
-function enqueue_select2_jquery() {
-    wp_register_style( 'select2css', get_stylesheet_directory_uri() . '/js/select2.min.css', false, '1.0', 'all' );
-    wp_register_script( 'select2', get_stylesheet_directory_uri() . '/js/select2.full.min.js', array( 'jquery' ), '1.0', true );
-    wp_enqueue_style( 'select2css' );
-    wp_enqueue_script( 'select2' );
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_select2_jquery' );
-
-/**
  * Enqueue Google Fonts
  */
 function ejs_google_fonts() {
