@@ -242,11 +242,22 @@ blockquote.text-align-left::after {
   margin-left: 1em;
 }
 
-.angle-before a {
+.angle-right a {
   text-decoration: underline;
 }
-.angle-before a::before {
-  content: url("../img/angle-before.svg");
+.angle-right a::before {
+  content: url("../img/angle-right.svg");
+  display: inline-block;
+  width: 9px;
+  margin-right: 5px;
+  line-height: 0;
+}
+
+.angle-left a {
+  text-decoration: underline;
+}
+.angle-left a::before {
+  content: url("../img/angle-left.svg");
   display: inline-block;
   width: 9px;
   margin-right: 5px;
@@ -1101,6 +1112,51 @@ blockquote.text-align-left::after {
   border-radius: 20px;
   color: #9a9a9a;
 }
+.topic-item-list.flex-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+.topic-item-list.flex-list .topic-item {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.ast-archive-description {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #42a1c2;
+}
+.ast-archive-description h1 {
+  margin: 0 !important;
+  color: inherit;
+  font-size: 43px;
+  font-weight: 400 !important;
+}
+
+.breadcrumb-trail {
+  font-size: 22px !important;
+  font-weight: 400 !important;
+}
+.breadcrumb-trail .angle-left {
+  display: inline-block;
+}
+.breadcrumb-trail .angle-left a {
+  margin-right: 10px;
+  text-decoration: none;
+}
+.breadcrumb-trail .angle-left a::before {
+  width: 7px;
+}
+
+.sub-topic {
+  color: #9a9a9a;
+  font-size: 22px;
+}
+
+.wpv-block-loop-item h2 {
+  font-size: 34px;
+}
 
 /* Protected content alert */
 .for-subscribers-top-block {
@@ -1490,7 +1546,10 @@ input[type=reset] {
 #post-6329 .hero,
 #post-6330 .hero,
 .search-results .hero,
-#post-11050 .hero {
+#post-11050 .hero,
+#post-12166 .hero,
+#post-11101 .hero,
+.tax-rubriques .hero {
   background-image: url("../img/hero/ambiance-accueil-small.jpg");
 }
 @media (min-width: 600px) {
@@ -1501,7 +1560,10 @@ input[type=reset] {
 #post-6329 .hero,
 #post-6330 .hero,
 .search-results .hero,
-#post-11050 .hero {
+#post-11050 .hero,
+#post-12166 .hero,
+#post-11101 .hero,
+.tax-rubriques .hero {
     background-image: url("../img/hero/ambiance-accueil.jpg");
   }
 }

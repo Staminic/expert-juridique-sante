@@ -29,7 +29,7 @@ get_header(); ?>
 		<header class="entry-header <?php astra_entry_header_class(); ?>">
 			<div class="entry-title-container mb-3">
 				<?php if ( 'publication' == get_post_type() ) : ?>
-					<h1 class="entry-title" itemprop="headline">Publications</h1>
+					<h2 class="h1 entry-title" itemprop="headline">Publications</h2>
 				<?php endif; ?>
 			</div>
 		</header>
@@ -38,7 +38,7 @@ get_header(); ?>
 
 		<?php astra_content_loop(); ?>
 
-		<?php astra_pagination(); ?>
+		<?php // astra_pagination(); ?>
 
 		<?php astra_primary_content_bottom(); ?>
 

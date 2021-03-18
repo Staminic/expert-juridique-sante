@@ -39,6 +39,8 @@
 					<h2 class="entry-title h1" itemprop="headline">Espace membre</h2>
 				<?php elseif ( $post->post_parent == '5995' ) : // Sentinelle ?>
 					<h2 class="entry-title h1" itemprop="headline">Sentinelle</h2>
+				<?php elseif ( $post->post_parent == '12166' ) : // Publications ?>
+					<h2 class="entry-title h1" itemprop="headline">Publications</h2>
 				<?php else : ?>
 					<?php
 					astra_the_title(

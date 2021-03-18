@@ -126,3 +126,138 @@ if ( ! function_exists( 'astra_post_link' ) ) {
 	}
 }
 add_filter( 'excerpt_more', 'astra_post_link', 1 );
+
+/**
+ * Archive Page Title
+ */
+if ( ! function_exists( 'astra_archive_page_info' ) ) {
+
+	/**
+	 * Wrapper function for the_title()
+	 *
+	 * Displays title only if the page title bar is disabled.
+	 */
+	function astra_archive_page_info() {
+
+		if ( apply_filters( 'astra_the_title_enabled', true ) ) {
+
+			// Author.
+			if ( is_author() ) { ?>
+
+				<section class="ast-author-box ast-archive-description">
+					<div class="ast-author-bio">
+						<?php do_action( 'astra_before_archive_title' ); ?>
+						<h1 class='page-title ast-archive-title'><?php echo get_the_author(); ?></h1>
+						<?php do_action( 'astra_after_archive_title' ); ?>
+						<p><?php echo wp_kses_post( get_the_author_meta( 'description' ) ); ?></p>
+						<?php do_action( 'astra_after_archive_description' ); ?>
+					</div>
+					<div class="ast-author-avatar">
+						<?php echo get_avatar( get_the_author_meta( 'email' ), 120 ); ?>
+					</div>
+				</section>
+
+				<?php
+
+				// Category.
+			} elseif ( is_category() ) {
+				?>
+
+				<section class="ast-archive-description">
+					<?php do_action( 'astra_before_archive_title' ); ?>
+					<h1 class="page-title ast-archive-title"><?php echo single_cat_title(); ?></h1>
+					<?php do_action( 'astra_after_archive_title' ); ?>
+					<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
+					<?php do_action( 'astra_after_archive_description' ); ?>
+				</section>
+
+				<?php
+
+				// Tag.
+			} elseif ( is_tag() ) {
+				?>
+
+				<section class="ast-archive-description">
+					<?php do_action( 'astra_before_archive_title' ); ?>
+					<h1 class="page-title ast-archive-title"><?php echo single_tag_title(); ?></h1>
+					<?php do_action( 'astra_after_archive_title' ); ?>
+					<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
+					<?php do_action( 'astra_after_archive_description' ); ?>
+				</section>
+
+				<?php
+
+				// Search.
+			} elseif ( is_search() ) {
+				?>
+
+				<section class="ast-archive-description">
+					<?php do_action( 'astra_before_archive_title' ); ?>
+					<?php
+						/* translators: 1: search string */
+						$title = apply_filters( 'astra_the_search_page_title', sprintf( __( 'Search Results for: %s', 'astra' ), '<span>' . get_search_query() . '</span>' ) );
+					?>
+					<h1 class="page-title ast-archive-title"> <?php echo $title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> </h1>
+					<?php do_action( 'astra_after_archive_title' ); ?>
+				</section>
+
+				<?php
+
+				// Other.
+			} else {
+				?>
+
+				<section class="ast-archive-description">
+					<?php
+					if ( ( is_tax() || is_category() || is_tag() ) ) {
+							$trail     = '';
+							$home      = '<span class="breadcrumb-item angle-left"><a href="/publications/">Publications</a></span>';
+							$query_obj = get_queried_object();
+							$term_id   = $query_obj->term_id;
+							$taxonomy  = get_taxonomy( $query_obj->taxonomy );
+					
+							if ( $term_id && $taxonomy ) {
+									// Add taxonomy label name to the trail.
+									// $trail .=  '/' . $taxonomy->labels->menu_name;
+									// Add term parents to the trail.
+									$trail .= '<span class="breadcrumb-item angle-left">' . get_term_parents_list( $term_id, $taxonomy->name, array( 'separator' => '', 'inclusive' => false ) ) . '</span>';
+							}
+					
+							// Print trail and add current term name at the end.
+							// echo '<p class="breadcrumb-trail">' . $home . $trail . $query_obj->name . '</p>';
+							echo '<p class="breadcrumb-trail">' . $home . $trail . '</p>';
+					}
+					?>
+
+					<?php do_action( 'astra_before_archive_title' ); ?>
+					<?php the_archive_title( '<h1 class="page-title ast-archive-title">', '</h1>' ); ?>
+					<?php do_action( 'astra_after_archive_title' ); ?>
+					<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
+					<?php do_action( 'astra_after_archive_description' ); ?>
+				</section>
+
+				<?php
+			}
+		}
+	}
+
+	add_action( 'astra_archive_header', 'astra_archive_page_info' );
+}
+
+/**
+ * Remove prefix word from Archive title
+ */
+add_filter( 'get_the_archive_title', 'ejs_archive_title_remove_prefix' );
+function ejs_archive_title_remove_prefix( $title ) {
+    if ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    
+		} elseif ( is_tax() ) {
+    	$tax = get_taxonomy( get_queried_object()->taxonomy );
+    	$title = single_term_title( '', false );
+    
+		} elseif ( is_category ()) {
+		$title = single_cat_title( '', false);
+	}
+    return $title;
+}

@@ -1037,6 +1037,58 @@
       }
     }
   }
+
+  &.flex-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+
+    .topic-item {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ast-archive-description {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed $brand-blue;
+
+  h1 {
+    margin: 0 !important;
+    color: inherit;
+    font-size: $h1-font-size;
+    font-weight: 400 !important;
+  }
+}
+
+.breadcrumb-trail {
+  font-size: $lead-font-size !important;
+  font-weight: 400 !important;
+
+  .angle-left {
+    display: inline-block;
+    a {
+      margin-right: 10px;
+      text-decoration: none;
+
+      &::before {
+        width: 7px;
+      }
+    }
+  }
+}
+
+.sub-topic {
+  color: #9a9a9a;
+  font-size: $lead-font-size;
+}
+
+.wpv-block-loop-item {
+  h2 {
+    font-size: $h3-font-size;
+  }
 }
 
 /* Protected content alert */
