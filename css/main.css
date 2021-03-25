@@ -981,6 +981,10 @@ blockquote.text-align-left::after {
 .tag-list a:hover {
   color: #42a1c2;
 }
+.tag-list + .tag-list {
+  border-top: none;
+  color: inherit;
+}
 
 /* Archive */
 .blog-item-title a {
@@ -1012,7 +1016,6 @@ blockquote.text-align-left::after {
 .for-subscribers {
   margin-top: 1em;
   padding: 20px 30px;
-  border-top: 1px solid #ece8e3;
   font-size: 16px;
 }
 .for-subscribers .alert {
@@ -1095,6 +1098,8 @@ blockquote.text-align-left::after {
 .topic-item-list {
   margin-left: 0 !important;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
 .topic-item-list .topic-item {
   margin-bottom: 20px;
@@ -1111,6 +1116,30 @@ blockquote.text-align-left::after {
   background-color: #e3dacf;
   border-radius: 20px;
   color: #9a9a9a;
+}
+.topic-item-list .topic-item.entree-en-vigueur {
+  order: -4;
+}
+.topic-item-list .topic-item.entree-en-vigueur a {
+  color: #ed7f47;
+}
+.topic-item-list .topic-item.integrales {
+  order: -3;
+}
+.topic-item-list .topic-item.integrales a {
+  color: #ed7f47;
+}
+.topic-item-list .topic-item.les-incontournables {
+  order: -2;
+}
+.topic-item-list .topic-item.les-incontournables a {
+  color: #ed7f47;
+}
+.topic-item-list .topic-item.speciale {
+  order: -1;
+}
+.topic-item-list .topic-item.speciale a {
+  color: #ed7f47;
 }
 .topic-item-list.flex-list {
   display: flex;
@@ -1155,7 +1184,7 @@ blockquote.text-align-left::after {
 }
 
 .wpv-block-loop-item h2 {
-  font-size: 34px;
+  font-size: 27px;
 }
 
 /* Protected content alert */
@@ -1584,6 +1613,7 @@ input[type=reset] {
 #post-11050 .hero,
 #post-12166 .hero,
 #post-11101 .hero,
+#post-17594 .hero,
 .tax-rubriques .hero,
 #post-12229 .hero {
   background-image: url("../img/hero/ambiance-accueil-small.jpg");
@@ -1599,6 +1629,7 @@ input[type=reset] {
 #post-11050 .hero,
 #post-12166 .hero,
 #post-11101 .hero,
+#post-17594 .hero,
 .tax-rubriques .hero,
 #post-12229 .hero {
     background-image: url("../img/hero/ambiance-accueil.jpg");

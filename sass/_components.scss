@@ -857,6 +857,11 @@
       color: $brand-blue;
     }
   }
+
+  & + .tag-list {
+    border-top: none;
+    color: inherit;
+  }
 }
 
 /* Archive */
@@ -899,7 +904,7 @@
   margin-top: 1em;
   padding: 20px 30px;
   // background-color: #ece8e3;
-  border-top: 1px solid #ece8e3;
+  // border-top: 1px solid #ece8e3;
   font-size: 16px;
 
   .alert {
@@ -1018,6 +1023,8 @@
 .topic-item-list {
   margin-left: 0 !important;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 
   .topic-item {
     margin-bottom: 20px;
@@ -1034,6 +1041,38 @@
         background-color: #e3dacf;
         border-radius: 20px;
         color: #9a9a9a;
+      }
+    }
+
+    &.entree-en-vigueur {
+      order: -4;
+
+      a {
+        color: $brand-orange;
+      }
+    }
+
+    &.integrales {
+      order: -3;
+
+      a {
+        color: $brand-orange;
+      }
+    }
+
+    &.les-incontournables {
+      order: -2;
+
+      a {
+        color: $brand-orange;
+      }
+    }
+
+    &.speciale {
+      order: -1;
+
+      a {
+        color: $brand-orange;
       }
     }
   }
@@ -1087,7 +1126,7 @@
 
 .wpv-block-loop-item {
   h2 {
-    font-size: $h3-font-size;
+    font-size: $h4-font-size;
   }
 }
 
