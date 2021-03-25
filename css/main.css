@@ -1160,13 +1160,19 @@ blockquote.text-align-left::after {
 
 /* Protected content alert */
 .for-subscribers-top-block {
-  text-align: center;
   color: #3f2794;
   font-family: "Source Serif Pro", serif;
-  font-weight: 700;
+  font-weight: 400;
 }
 .for-subscribers-top-block p {
   margin: 0;
+}
+.for-subscribers-top-block .btn {
+  margin: 0 10px;
+  padding: 5px 20px;
+  border: 1px solid #3f2794;
+  color: #3f2794;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .for-subscribers-bottom-block {
@@ -1260,6 +1266,35 @@ blockquote.text-align-left::after {
   color: #ffffff;
   font-family: inherit;
   font-weight: inherit;
+}
+.publication-search-form .date-filter .form-group {
+  align-items: center;
+}
+.publication-search-form .date-filter label {
+  flex: unset;
+  text-transform: none;
+}
+.publication-search-form .date-filter .ui-datepicker-trigger {
+  width: 25px;
+  margin: 3px;
+}
+.publication-search-form .date-filter .wpv_date_input {
+  display: inline-block;
+  min-width: 120px;
+  margin-left: 10px;
+  border-bottom: 1px dashed #c1c1c1;
+  text-align: center;
+}
+
+.ui-datepicker .ui-widget-header {
+  background: #535353 !important;
+  border-color: #535353 !important;
+}
+
+.ui-datepicker .ui-state-default,
+.ui-datepicker.ui-widget-content .ui-state-default,
+.ui-datepicker .ui-widget-header .ui-state-default {
+  color: #535353 !important;
 }
 
 body {
@@ -1549,7 +1584,8 @@ input[type=reset] {
 #post-11050 .hero,
 #post-12166 .hero,
 #post-11101 .hero,
-.tax-rubriques .hero {
+.tax-rubriques .hero,
+#post-12229 .hero {
   background-image: url("../img/hero/ambiance-accueil-small.jpg");
 }
 @media (min-width: 600px) {
@@ -1563,7 +1599,8 @@ input[type=reset] {
 #post-11050 .hero,
 #post-12166 .hero,
 #post-11101 .hero,
-.tax-rubriques .hero {
+.tax-rubriques .hero,
+#post-12229 .hero {
     background-image: url("../img/hero/ambiance-accueil.jpg");
   }
 }

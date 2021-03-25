@@ -261,3 +261,29 @@ function ejs_archive_title_remove_prefix( $title ) {
 	}
     return $title;
 }
+
+/**
+ * Change Toolset calendar icon
+ */
+function ejs_calendar_icon() {
+		if ( !is_admin() ) {
+			$calendar_image = '/wp-content/uploads/calendar-icon.svg';
+		}
+		else {
+			$calendar_image = '/wp-content/plugins/toolset-blocks/vendor/toolset/toolset-common/toolset-forms/images/calendar.gif';
+		}	
+		return $calendar_image;
+}
+add_filter('wptoolset_filter_wptoolset_calendar_image', 'ejs_calendar_icon');
+
+/**
+ * Localize Toolset datepicker
+ */
+add_action( 'wp_print_footer_scripts', 'prefix_localize_jquery_ui_datepicker', 9 );
+function prefix_localize_jquery_ui_datepicker() {
+    if ( ! function_exists( 'wp_localize_jquery_ui_datepicker' ) ) {
+        return;
+    }
+       
+    wp_localize_jquery_ui_datepicker();
+}

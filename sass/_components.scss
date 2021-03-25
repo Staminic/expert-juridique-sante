@@ -1093,13 +1093,21 @@
 
 /* Protected content alert */
 .for-subscribers-top-block {
-  text-align: center;
+  // text-align: center;
   color: $deep-blue;
   font-family: $font-family-serif;
-  font-weight: 700;
+  font-weight: 400;
 
   p {
     margin: 0;
+  }
+
+  .btn {
+    margin: 0 10px;
+    padding: 5px 20px;
+    border: 1px solid $deep-blue;
+    color: $deep-blue;
+    font-family: $font-family-sans-serif;
   }
 }
 
@@ -1208,4 +1216,40 @@
       font-weight: inherit;
     }
   }
+
+  .date-filter {
+    .form-group {
+      align-items: center;
+    }
+
+    label {
+      flex: unset;
+      text-transform: none;
+    }
+
+    .ui-datepicker-trigger {
+      width: 25px;
+      margin: 3px;
+    }
+
+    .wpv_date_input {
+      display: inline-block;
+      min-width: 120px;
+      margin-left: 10px;
+      // background-color: #fafafa;
+      border-bottom: 1px dashed rgb(193, 193, 193);
+      text-align: center;
+    }
+  }
+}
+
+.ui-datepicker .ui-widget-header {
+  background: #535353 !important;
+  border-color: #535353 !important;
+}
+
+.ui-datepicker .ui-state-default,
+.ui-datepicker.ui-widget-content .ui-state-default,
+.ui-datepicker .ui-widget-header .ui-state-default {
+  color: #535353 !important;
 }
