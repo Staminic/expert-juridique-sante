@@ -659,6 +659,32 @@
       content: url("../img/picto-hammer.svg");
     }
   }
+
+  &.picto-audit {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -46px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-audit.svg");
+    }
+  }
+
+  &.picto-network {
+    align-items: flex-start;
+    @media (min-width: 922px) {
+      margin-left: -50px;
+    }
+
+    &:before {
+      width: auto;
+      margin-top: 8px;
+      content: url("../img/picto-network.svg");
+    }
+  }
 }
 
 .post-5995 {

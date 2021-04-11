@@ -822,6 +822,32 @@ blockquote.text-align-left::after {
   margin-top: 8px;
   content: url("../img/picto-hammer.svg");
 }
+.picto-heading.picto-audit {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-audit {
+    margin-left: -46px;
+  }
+}
+.picto-heading.picto-audit:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-audit.svg");
+}
+.picto-heading.picto-network {
+  align-items: flex-start;
+}
+@media (min-width: 922px) {
+  .picto-heading.picto-network {
+    margin-left: -50px;
+  }
+}
+.picto-heading.picto-network:before {
+  width: auto;
+  margin-top: 8px;
+  content: url("../img/picto-network.svg");
+}
 
 .post-5995 .entry-title {
   display: flex;
@@ -1817,23 +1843,29 @@ input[type=reset] {
 
 #post-5995 .hero,
 #post-10972 .hero,
+#post-12314 .hero,
 .tax-collection-publication.term-sentinelle .hero {
   background-image: url("../img/hero/sentinelle-small.jpg");
 }
 @media (min-width: 600px) {
   #post-5995 .hero,
 #post-10972 .hero,
+#post-12314 .hero,
 .tax-collection-publication.term-sentinelle .hero {
     background-image: url("../img/hero/sentinelle.jpg");
   }
 }
 
 #post-6013 .hero,
+#post-17650 .hero,
+#post-12315 .hero,
 .tax-collection-publication.term-focus .hero {
   background-image: url("../img/hero/focus-small.jpg");
 }
 @media (min-width: 600px) {
   #post-6013 .hero,
+#post-17650 .hero,
+#post-12315 .hero,
 .tax-collection-publication.term-focus .hero {
     background-image: url("../img/hero/focus.jpg");
   }
@@ -1867,6 +1899,10 @@ input[type=reset] {
 }
 
 /* Registration form */
+.mp-form-row.mepr_bold.mepr_price {
+  display: none;
+}
+
 .mp-form-row {
   margin-bottom: 20px !important;
 }
@@ -1879,6 +1915,42 @@ input[type=reset] {
 }
 
 .mepr-unauthorized-message + .mepr-login-form-wrap {
+  display: none;
+}
+
+/* Member dashboard */
+#mepr-account-subscriptions-table thead > tr > th:nth-child(5) {
+  display: none;
+}
+#mepr-account-subscriptions-table td[data-label*="Expiration de la carte"] {
+  display: none;
+}
+#mepr-account-subscriptions-table .mepr-account-auto-rebill,
+#mepr-account-subscriptions-table .mepr-account-rebill {
+  display: none;
+}
+
+#mpca_sub_accounts_used {
+  display: none;
+}
+
+#mpca-add-sub-user {
+  margin-top: 20px;
+}
+
+#mpca-add-sub-user-form input {
+  margin-bottom: 20px;
+}
+#mpca-add-sub-user-form label > span {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+#mpca_export_sub_accounts {
+  display: none;
+}
+
+#mpca_import_sub_accounts {
   display: none;
 }
 /*# sourceMappingURL=main.css.map */
