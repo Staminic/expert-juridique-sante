@@ -21,6 +21,14 @@
   display: none;
 }
 
+.memberpressproduct-template-default {
+  .mepr-signup-form {
+    .username-instruction {
+      display: none;
+    }
+  }
+}
+
 /* Member dashboard */
 
 #mepr-account-subscriptions-table {
@@ -66,6 +74,10 @@
 
 #mpca_export_sub_accounts {
   display: none;
+}
+
+#mpca_signup_url {
+  margin-top: 50px;
 }
 
 #mpca_import_sub_accounts {

@@ -36,7 +36,7 @@
 				<?php if ( $post->post_parent == '5777' ) : // Experts ?>
 					<h2 class="entry-title h1" itemprop="headline">Nos experts</h2>
 				<?php elseif ( get_the_ID() === 6330 ) : // Login page ?>
-					<h2 class="entry-title h1" itemprop="headline">Espace membre</h2>
+					<h2 class="entry-title h1" itemprop="headline">Espace adhérent</h2>
 				<?php elseif ( $post->post_parent == '5995' ) : // Sentinelle ?>
 					<h2 class="entry-title h1" itemprop="headline">Sentinelle</h2>
 				<?php elseif ( $post->post_parent == '12166' ) : // Publications ?>
