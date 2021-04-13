@@ -35,13 +35,16 @@
   thead {
     > tr {
       > th {
-        &:nth-child(5) {
+        &:nth-child(5),
+        &:nth-child(6) {
           display: none;
         }
       }
     }
   }
-  td[data-label*="Expiration de la carte"] {
+
+  td[data-label*="Expiration de la carte"],
+  td[data-label*="Actions"] {
     display: none;
   }
 

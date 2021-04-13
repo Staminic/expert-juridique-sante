@@ -1429,6 +1429,14 @@ input[type=reset] {
   font-size: inherit;
 }
 
+.gform_wrapper ul li.gfield {
+  margin-top: 40px !important;
+}
+
+#field_7_1 {
+  margin-top: 0 !important;
+}
+
 .site-header {
   padding-bottom: 0.5em;
 }
@@ -1830,11 +1838,13 @@ input[type=reset] {
   }
 }
 
-#post-5976 .hero {
+#post-5976 .hero,
+#post-17694 .hero {
   background-image: url("../img/hero/solutions2-small.jpg");
 }
 @media (min-width: 600px) {
-  #post-5976 .hero {
+  #post-5976 .hero,
+#post-17694 .hero {
     background-image: url("../img/hero/solutions2.jpg");
   }
 }
@@ -1896,6 +1906,15 @@ input[type=reset] {
   }
 }
 
+#post-17718 .hero {
+  background-image: url("../img/hero/orchestre-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-17718 .hero {
+    background-image: url("../img/hero/orchestre.jpg");
+  }
+}
+
 /* Registration form */
 .mp-form-row.mepr_bold.mepr_price {
   display: none;
@@ -1921,10 +1940,11 @@ input[type=reset] {
 }
 
 /* Member dashboard */
-#mepr-account-subscriptions-table thead > tr > th:nth-child(5) {
+#mepr-account-subscriptions-table thead > tr > th:nth-child(5), #mepr-account-subscriptions-table thead > tr > th:nth-child(6) {
   display: none;
 }
-#mepr-account-subscriptions-table td[data-label*="Expiration de la carte"] {
+#mepr-account-subscriptions-table td[data-label*="Expiration de la carte"],
+#mepr-account-subscriptions-table td[data-label*=Actions] {
   display: none;
 }
 #mepr-account-subscriptions-table .mepr-account-auto-rebill,

@@ -224,7 +224,8 @@
   }
 }
 
-#post-5976 {
+#post-5976,
+#post-17694 {
   // Solutions
   .hero {
     background-image: url("../img/hero/solutions2-small.jpg");
@@ -292,6 +293,17 @@
 
     @media (min-width: 600px) {
       background-image: url("../img/hero/entreprises.jpg");
+    }
+  }
+}
+
+#post-17718 {
+  // Mécénat
+  .hero {
+    background-image: url("../img/hero/orchestre-small.jpg");
+
+    @media (min-width: 600px) {
+      background-image: url("../img/hero/orchestre.jpg");
     }
   }
 }
