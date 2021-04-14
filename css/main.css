@@ -1165,6 +1165,7 @@ blockquote.text-align-left::after {
 }
 .topic-item-list.flex-list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 0;
 }
