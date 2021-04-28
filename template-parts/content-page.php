@@ -73,7 +73,7 @@
 		<?php astra_entry_content_before(); ?>
 
 		<?php the_content(); ?>
-
+		
 		<?php astra_entry_content_after(); ?>
 
 		<?php

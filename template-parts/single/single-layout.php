@@ -47,7 +47,7 @@
 	>
 
 		<?php astra_entry_content_before(); ?>
-
+		
 		<?php the_content(); ?>
 
 		<?php
@@ -74,5 +74,9 @@
 				)
 			);
 			?>
-	</div><!-- .entry-content .clear -->
+			
+			<pre>
+			<?php do_action( 'bwsplgns_display_pdf_print_buttons', 'bottom' ); ?>
+			</pre>
+	</div><!-- .entry-content .clear test4-->
 </div>

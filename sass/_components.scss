@@ -221,15 +221,17 @@
       position: relative;
       margin: 0;
 
-      &:before {
-        content: url("../img/picto-video-play.svg");
-        width: 10vw;
-        max-width: 100px;
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      > a {
+        &:before {
+          content: url("../img/picto-video-play.svg");
+          width: 10vw;
+          max-width: 100px;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
       }
     }
 
@@ -258,7 +260,7 @@
   figure {
     > img {
       object-fit: cover;
-      object-position: left;
+      object-position: right;
       height: 250px;
 
       @media (min-width: 922px) {
@@ -1318,4 +1320,22 @@
 .ui-datepicker.ui-widget-content .ui-state-default,
 .ui-datepicker .ui-widget-header .ui-state-default {
   color: #535353 !important;
+}
+
+/* PDF link */
+.pdfprnt-buttons {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ede9e3;
+
+  a {
+    padding-right: 0;
+    padding-left: 0;
+
+    img {
+      padding-right: 0;
+      padding-left: 0;
+      height: 40px;
+    }
+  }
 }

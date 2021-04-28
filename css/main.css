@@ -426,7 +426,7 @@ blockquote.text-align-left::after {
   position: relative;
   margin: 0;
 }
-.wp-block-group.fullwidth-lg figure:before {
+.wp-block-group.fullwidth-lg figure > a:before {
   content: url("../img/picto-video-play.svg");
   width: 10vw;
   max-width: 100px;
@@ -456,7 +456,7 @@ blockquote.text-align-left::after {
 
 .home-video figure > img {
   object-fit: cover;
-  object-position: left;
+  object-position: right;
   height: 250px;
 }
 @media (min-width: 922px) {
@@ -1349,6 +1349,22 @@ blockquote.text-align-left::after {
   color: #535353 !important;
 }
 
+/* PDF link */
+.pdfprnt-buttons {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ede9e3;
+}
+.pdfprnt-buttons a {
+  padding-right: 0;
+  padding-left: 0;
+}
+.pdfprnt-buttons a img {
+  padding-right: 0;
+  padding-left: 0;
+  height: 40px;
+}
+
 body {
   line-height: 1.5;
   background-color: #fffbf5;
@@ -1908,11 +1924,11 @@ input[type=reset] {
 }
 
 #post-17718 .hero {
-  background-image: url("../img/hero/orchestre-small.jpg");
+  background-image: url("../img/hero/choeur-small.jpg");
 }
 @media (min-width: 600px) {
   #post-17718 .hero {
-    background-image: url("../img/hero/orchestre.jpg");
+    background-image: url("../img/hero/choeur.jpg");
   }
 }
 
