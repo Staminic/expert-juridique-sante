@@ -1932,6 +1932,15 @@ input[type=reset] {
   }
 }
 
+#post-17883 .hero {
+  background-image: url("../img/hero/references-small.jpg");
+}
+@media (min-width: 600px) {
+  #post-17883 .hero {
+    background-image: url("../img/hero/references.jpg");
+  }
+}
+
 /* Registration form */
 .mp-form-row.mepr_bold.mepr_price {
   display: none;

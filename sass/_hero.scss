@@ -307,3 +307,14 @@
     }
   }
 }
+
+#post-17883 {
+  // Références
+  .hero {
+    background-image: url("../img/hero/references-small.jpg");
+
+    @media (min-width: 600px) {
+      background-image: url("../img/hero/references.jpg");
+    }
+  }
+}
